@@ -9,13 +9,15 @@
     </div>
 
     <div v-else class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <ExporterCard
+      <div
         v-for="(exporter, i) in exporters"
         :key="exporter.name"
-        v-motion="staggerChildren(exporters.length)"
-        :custom="i"
-        :exporter="exporter"
-      />
+        v-motion-slide-up
+        :style="{ animationDelay: `${i * 50}ms` }"
+        class="animate-slide-up"
+      >
+        <ExporterCard :exporter="exporter" />
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +29,4 @@ defineProps<{
   exporters: Exporter[]
   loading?: boolean
 }>()
-
-const { staggerChildren } = useAnimations()
 </script>

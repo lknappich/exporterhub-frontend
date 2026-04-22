@@ -28,6 +28,10 @@ export default {
           hover:   '#818cf8',
           muted:   'rgba(99,102,241,0.12)',
         },
+        text: {
+          primary:   '#f1f5f9',
+          secondary: '#94a3b8',
+        },
         category: {
           infrastructure: '#6366f1',
           networking:     '#06b6d4',
