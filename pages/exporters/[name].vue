@@ -201,14 +201,16 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { CATEGORY_COLORS } from '~/types/exporter'
-import type { Exporter } from '~/types/exporter'
+import type { Exporter, Registry } from '~/types/exporter'
 
 const route = useRoute()
-const store = useRegistryStore()
-const { getExporter } = useRegistry()
+const config = useRuntimeConfig()
+const { data: registry } = await useFetch<Registry>(config.public.registryUrl)
 
 const name = computed(() => route.params.name as string)
-const exporter = computed(() => getExporter(name.value))
+const exporter = computed(() =>
+  registry.value?.exporters.find(e => e.name === name.value)
+)
 
 const dockerPullCmd = computed(() =>
   exporter.value ? `docker pull ${exporter.value.docker_image}` : ''
@@ -247,7 +249,7 @@ const dashboardUrl = computed(() =>
 )
 
 // Prev/next navigation
-const exporterList = computed(() => store.registry?.exporters ?? [])
+const exporterList = computed(() => registry.value?.exporters ?? [])
 const currentIndex = computed(() =>
   exporterList.value.findIndex(e => e.name === name.value)
 )

@@ -86,7 +86,7 @@
         <h2 class="text-2xl font-bold">Exporters</h2>
         <div class="flex items-center gap-3">
           <select
-            v-model="store.sortBy"
+            v-model="sortBy"
             class="rounded-lg border border-border bg-bg-card px-3 py-2 text-sm text-text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           >
             <option value="name">Sort by name</option>
@@ -103,23 +103,50 @@
 
       <!-- Category tabs -->
       <div class="mb-8">
-        <CategoryTabs v-model="store.selectedCategory" />
+        <CategoryTabs v-model="selectedCategory" />
       </div>
 
       <!-- Grid -->
-      <ExporterGrid :exporters="store.filteredExporters" :loading="store.loading" />
+      <ExporterGrid :exporters="filteredExporters" :loading="loading" />
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+import type { Registry } from '~/types/exporter'
 
-const store = useRegistryStore()
+const config = useRuntimeConfig()
+const { data: registry, pending: loading } = await useFetch<Registry>(config.public.registryUrl)
 
-const totalExporters = computed(() => store.registry?.total_exporters ?? 50)
+const selectedCategory = ref<string>('All')
+const searchQuery = ref('')
+const sortBy = ref<'name' | 'metrics' | 'category'>('name')
+
+const filteredExporters = computed(() => {
+  let list = registry.value?.exporters ?? []
+  if (searchQuery.value) {
+    const q = searchQuery.value.toLowerCase()
+    list = list.filter(e =>
+      e.name.includes(q) ||
+      e.display_name.toLowerCase().includes(q) ||
+      e.description.toLowerCase().includes(q) ||
+      e.tags.some(t => t.includes(q))
+    )
+  }
+  if (selectedCategory.value !== 'All') {
+    list = list.filter(e => e.category === selectedCategory.value)
+  }
+  return [...list].sort((a, b) => {
+    if (sortBy.value === 'metrics') return b.metrics_count - a.metrics_count
+    if (sortBy.value === 'category') return a.category.localeCompare(b.category)
+    return a.name.localeCompare(b.name)
+  })
+})
+
+const totalExporters = computed(() => registry.value?.total_exporters ?? 50)
 const totalMetrics = computed(() =>
-  store.registry?.exporters.reduce((sum, e) => sum + e.metrics_count, 0) ?? 1250
+  registry.value?.exporters.reduce((sum, e) => sum + e.metrics_count, 0) ?? 1250
 )
 
 const { fadeIn, slideUp } = useAnimations()
