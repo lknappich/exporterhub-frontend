@@ -1,5 +1,16 @@
 <template>
-  <div class="min-h-screen bg-[var(--color-bg-primary)]">
-    <slot />
+  <div class="min-h-screen bg-bg-primary text-text-primary font-sans">
+    <TheNav />
+    <main class="pt-16">
+      <slot />
+    </main>
+    <TheFooter />
+    <CookieBanner />
+    <CookieSettings />
   </div>
 </template>
+
+<script setup lang="ts">
+const store = useRegistryStore()
+await store.fetchRegistry()
+</script>
