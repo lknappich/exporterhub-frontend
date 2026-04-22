@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-
 export const useRegistryStore = defineStore('registry', () => {
   const { registry, loading, error, fetchRegistry, exportersByCategory, searchExporters } = useRegistry()
   const selectedCategory = ref<string>('All')
