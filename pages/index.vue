@@ -11,7 +11,7 @@
               <span class="text-accent">Exporters</span>
             </h1>
             <p class="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-12">
-              50 production-grade exporters for infrastructure monitoring.
+              60 production-grade exporters for infrastructure monitoring.
               Docker-ready, Prometheus-compatible, built for scale.
             </p>
           </div>

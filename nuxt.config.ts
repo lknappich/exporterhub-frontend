@@ -33,11 +33,11 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: '50 enterprise-grade Prometheus exporters for infrastructure monitoring' },
+        { name: 'description', content: '60 enterprise-grade Prometheus exporters for infrastructure monitoring' },
         { name: 'theme-color', content: '#0a0a0f' },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'Exporter Hub' },
-        { property: 'og:description', content: '50 enterprise-grade Prometheus exporters' },
+        { property: 'og:description', content: '60 enterprise-grade Prometheus exporters' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
