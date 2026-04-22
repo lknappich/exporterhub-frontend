@@ -120,6 +120,6 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Privacy Policy — Exporter Hub',
+  title: 'Privacy Policy',
 })
 </script>

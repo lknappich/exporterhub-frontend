@@ -73,6 +73,6 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Impressum — Exporter Hub',
+  title: 'Impressum',
 })
 </script>

@@ -20,13 +20,13 @@
               Customize
             </button>
             <button
-              class="btn-secondary text-sm"
+              class="btn-secondary text-sm flex-1 sm:flex-initial"
               @click="cookieConsent.rejectAll()"
             >
               Reject all
             </button>
             <button
-              class="btn-primary text-sm"
+              class="btn-primary text-sm flex-1 sm:flex-initial"
               @click="cookieConsent.acceptAll()"
             >
               Accept all

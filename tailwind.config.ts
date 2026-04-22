@@ -1,5 +1,3 @@
-import type { Config } from 'tailwindcss'
-
 export default {
   content: [
     './components/**/*.{vue,js,ts}',
@@ -72,4 +70,4 @@ export default {
       },
     },
   },
-} satisfies Config
+}

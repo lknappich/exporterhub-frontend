@@ -4,8 +4,6 @@ export default defineNuxtConfig({
   ssr: true,
 
   modules: [
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
   ],
@@ -63,11 +61,5 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: false,
-  },
-
-  vite: {
-    optimizeDeps: {
-      include: ['@iconify/vue'],
-    },
   },
 })

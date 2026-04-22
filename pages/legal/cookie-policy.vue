@@ -36,10 +36,10 @@
             </thead>
             <tbody>
               <tr class="border-b border-border">
-                <td class="px-4 py-3 font-mono text-xs">eh_cookie_consent</td>
+                <td class="px-4 py-3 font-mono text-xs">eh_consent</td>
                 <td class="px-4 py-3"><span class="badge bg-green-500/15 text-green-500">Necessary</span></td>
                 <td class="px-4 py-3">Stores your cookie consent preferences</td>
-                <td class="px-4 py-3">localStorage</td>
+                <td class="px-4 py-3">Cookie</td>
                 <td class="px-4 py-3">12 months</td>
               </tr>
               <tr class="border-b border-border">
@@ -89,7 +89,7 @@
           <li><strong>Reject all:</strong> Disable all non-essential cookies and analytics</li>
           <li><strong>Customize:</strong> Choose which categories of cookies to enable</li>
         </ul>
-        <p class="mt-2">You can change your preferences at any time by clicking the "Cookie Settings" link in the footer or by clearing your browser's local storage.</p>
+        <p class="mt-2">You can change your preferences at any time by clicking the "Cookie Settings" link in the footer or by clearing the eh_consent cookie in your browser settings.</p>
       </div>
 
       <div>

@@ -12,7 +12,7 @@ const el = ref<HTMLElement>()
 const displayValue = ref(0)
 const isVisible = ref(false)
 
-const duration = computed(() => props.duration ?? 1500)
+const durationMs = computed(() => props.duration ?? 1500)
 
 let animationFrame: number
 
@@ -22,7 +22,7 @@ const animate = () => {
 
   const step = (now: number) => {
     const elapsed = now - start
-    const progress = Math.min(elapsed / duration.value, 1)
+    const progress = Math.min(elapsed / durationMs.value, 1)
     const eased = 1 - Math.pow(1 - progress, 3)
     displayValue.value = Math.round(startValue + (props.target - startValue) * eased)
 
@@ -36,24 +36,23 @@ const animate = () => {
   animationFrame = requestAnimationFrame(step)
 }
 
-const observer = ref<IntersectionObserver>()
-
 onMounted(() => {
   if (!el.value) return
-  observer.value = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting && !isVisible.value) {
         isVisible.value = true
         animate()
+        observer.disconnect()
       }
     },
     { threshold: 0.5 }
   )
-  observer.value.observe(el.value)
-})
+  observer.observe(el.value)
 
-onBeforeUnmount(() => {
-  if (animationFrame) cancelAnimationFrame(animationFrame)
-  observer.value?.disconnect()
+  onBeforeUnmount(() => {
+    if (animationFrame) cancelAnimationFrame(animationFrame)
+    observer.disconnect()
+  })
 })
 </script>

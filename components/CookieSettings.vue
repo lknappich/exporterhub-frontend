@@ -92,7 +92,6 @@ const save = () => {
     analytics: analyticsEnabled.value,
     preferences: preferencesEnabled.value,
   })
-  cookieConsent.showSettings.value = false
 }
 
 const cancel = () => {

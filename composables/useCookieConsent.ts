@@ -6,114 +6,71 @@ export interface ConsentState {
   preferences: boolean
 }
 
-const CONSENT_KEY = 'eh_cookie_consent'
 const CURRENT_VERSION = '1.0'
-const EXPIRY_MONTHS = 12
-
-const isExpired = (timestamp: number): boolean => {
-  const expiryMs = EXPIRY_MONTHS * 30 * 24 * 60 * 60 * 1000
-  return Date.now() - timestamp > expiryMs
-}
+const EXPIRY_SECONDS = 365 * 24 * 60 * 60
 
 export const useCookieConsent = () => {
-  const showBanner = ref(false)
-  const showSettings = ref(false)
-  const consent = ref<ConsentState | null>(null)
+  const consentCookie = useCookie<ConsentState | null>('eh_consent', {
+    default: () => null,
+    maxAge: EXPIRY_SECONDS,
+    sameSite: 'lax',
+    secure: true,
+  })
 
-  const loadConsent = (): ConsentState | null => {
-    if (import.meta.server) return null
-    try {
-      const raw = localStorage.getItem(CONSENT_KEY)
-      if (!raw) return null
-      const parsed = JSON.parse(raw) as ConsentState
-      if (parsed.version !== CURRENT_VERSION || isExpired(parsed.timestamp)) {
-        localStorage.removeItem(CONSENT_KEY)
-        return null
+  const showBanner = computed(() => {
+    if (!consentCookie.value) return true
+    if (consentCookie.value.version !== CURRENT_VERSION) return true
+    return false
+  })
+
+  const showSettings = ref(false)
+  const consent = computed(() => consentCookie.value)
+
+  const applyConsent = (state: ConsentState) => {
+    if (!import.meta.client) return
+    if (state.analytics) {
+      if (!document.getElementById('plausible-script')) {
+        const s = document.createElement('script')
+        s.id = 'plausible-script'
+        s.defer = true
+        s.dataset.domain = window.location.hostname
+        s.src = 'https://plausible.io/js/script.js'
+        document.head.appendChild(s)
       }
-      return parsed
-    } catch {
-      return null
+    } else {
+      document.getElementById('plausible-script')?.remove()
     }
   }
 
   const saveConsent = (state: ConsentState) => {
-    if (import.meta.server) return
-    const data: ConsentState = {
-      ...state,
-      version: CURRENT_VERSION,
-      timestamp: Date.now(),
-    }
-    localStorage.setItem(CONSENT_KEY, JSON.stringify(data))
-    consent.value = data
-    showBanner.value = false
-    applyConsent(data)
-  }
-
-  const applyConsent = (state: ConsentState) => {
-    if (import.meta.server) return
-    if (state.analytics) {
-      const existing = document.getElementById('plausible-script')
-      if (!existing) {
-        const script = document.createElement('script')
-        script.id = 'plausible-script'
-        script.async = true
-        script.defer = true
-        script.dataset.domain = window.location.hostname
-        script.src = 'https://plausible.io/js/script.js'
-        document.head.appendChild(script)
-      }
-    } else {
-      const existing = document.getElementById('plausible-script')
-      if (existing) existing.remove()
-    }
+    consentCookie.value = { ...state, version: CURRENT_VERSION, timestamp: Date.now() }
+    showSettings.value = false
+    applyConsent(consentCookie.value!)
   }
 
   const acceptAll = () => {
-    saveConsent({
-      version: CURRENT_VERSION,
-      timestamp: Date.now(),
-      necessary: true,
-      analytics: true,
-      preferences: true,
-    })
+    saveConsent({ version: CURRENT_VERSION, timestamp: Date.now(), necessary: true, analytics: true, preferences: true })
   }
 
   const rejectAll = () => {
-    saveConsent({
-      version: CURRENT_VERSION,
-      timestamp: Date.now(),
-      necessary: true,
-      analytics: false,
-      preferences: false,
-    })
+    saveConsent({ version: CURRENT_VERSION, timestamp: Date.now(), necessary: true, analytics: false, preferences: false })
   }
 
   const withdraw = () => {
-    if (import.meta.server) return
-    localStorage.removeItem(CONSENT_KEY)
-    consent.value = null
-    showBanner.value = true
-    const existing = document.getElementById('plausible-script')
-    if (existing) existing.remove()
+    consentCookie.value = null
+    if (import.meta.client) {
+      document.getElementById('plausible-script')?.remove()
+    }
   }
 
   const openSettings = () => {
     showSettings.value = true
   }
 
-  const init = () => {
-    const stored = loadConsent()
-    if (stored) {
-      consent.value = stored
-      applyConsent(stored)
-      showBanner.value = false
-    } else {
-      showBanner.value = true
-    }
-  }
-
   onMounted(() => {
-    init()
+    if (consentCookie.value) {
+      applyConsent(consentCookie.value)
+    }
   })
 
   return {

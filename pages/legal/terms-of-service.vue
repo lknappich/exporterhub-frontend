@@ -103,6 +103,6 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Terms of Service — Exporter Hub',
+  title: 'Terms of Service',
 })
 </script>

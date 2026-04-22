@@ -5,12 +5,8 @@
       <slot />
     </main>
     <TheFooter />
-    <CookieBanner />
-    <CookieSettings />
   </div>
 </template>
 
 <script setup lang="ts">
-const store = useRegistryStore()
-await store.fetchRegistry()
 </script>

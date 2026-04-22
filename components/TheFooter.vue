@@ -1,7 +1,7 @@
 <template>
   <footer class="border-t border-border bg-bg-secondary">
     <div class="mx-auto max-w-7xl px-6 py-12">
-      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         <!-- Product -->
         <div>
           <h3 class="text-sm font-semibold text-text-primary mb-4">Product</h3>
@@ -37,36 +37,18 @@
           </ul>
         </div>
 
-        <!-- Resources -->
+        <!-- Community -->
         <div>
-          <h3 class="text-sm font-semibold text-text-primary mb-4">Resources</h3>
+          <h3 class="text-sm font-semibold text-text-primary mb-4">Community</h3>
           <ul class="space-y-2.5">
             <li>
-              <a href="https://prometheus.io/docs/" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Prometheus Docs</a>
+              <a href="https://github.com/lknappich/exporterhub" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">GitHub Repo</a>
             </li>
             <li>
-              <a href="https://grafana.com/docs/" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Grafana Docs</a>
+              <a href="https://hub.docker.com/u/lknappich" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Docker Hub</a>
             </li>
             <li>
-              <a href="https://github.com/lknappich/exporterhub" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">GitHub</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Social -->
-        <div>
-          <h3 class="text-sm font-semibold text-text-primary mb-4">Social</h3>
-          <ul class="space-y-2.5">
-            <li>
-              <a href="https://github.com/lknappich" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">GitHub</a>
-            </li>
-            <li>
-              <button
-                class="text-sm text-text-secondary hover:text-text-primary transition-colors"
-                @click="cookieConsent.openSettings()"
-              >
-                Cookie Settings
-              </button>
+              <a href="https://github.com/lknappich/exporterhub/issues/new" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Report Issue</a>
             </li>
           </ul>
         </div>

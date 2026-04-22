@@ -3,9 +3,7 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  redirect: '/#exporters',
-})
+definePageMeta({ layout: 'default' })
 
-await navigateTo('/#exporters', { redirectCode: 301 })
+await navigateTo('/#exporters', { redirectCode: 301, external: false })
 </script>
