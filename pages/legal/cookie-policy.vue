@@ -43,18 +43,11 @@
                 <td class="px-4 py-3">12 months</td>
               </tr>
               <tr class="border-b border-border">
-                <td class="px-4 py-3 font-mono text-xs">color-mode</td>
+                <td class="px-4 py-3 font-mono text-xs">eh-color-mode</td>
                 <td class="px-4 py-3"><span class="badge bg-green-500/15 text-green-500">Necessary</span></td>
                 <td class="px-4 py-3">Remembers your light/dark mode preference</td>
-                <td class="px-4 py-3">localStorage</td>
-                <td class="px-4 py-3">Persistent</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="px-4 py-3 font-mono text-xs">nuxt-session</td>
-                <td class="px-4 py-3"><span class="badge bg-green-500/15 text-green-500">Necessary</span></td>
-                <td class="px-4 py-3">Manages server-side session state</td>
                 <td class="px-4 py-3">Cookie</td>
-                <td class="px-4 py-3">Session</td>
+                <td class="px-4 py-3">Persistent</td>
               </tr>
               <tr class="border-b border-border">
                 <td class="px-4 py-3 font-mono text-xs">_plausible_* (Plausible Analytics)</td>
