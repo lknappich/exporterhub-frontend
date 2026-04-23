@@ -126,14 +126,14 @@
 
 <script setup lang="ts">
 import type { Registry } from '~/types/exporter'
+import registryData from '~/registry.json'
 
 const route = useRoute()
-const config = useRuntimeConfig()
-const { data: registry } = await useFetch<Registry>(config.public.registryUrl)
+const registry = ref<Registry>(registryData as Registry)
 
 const name = computed(() => route.params.name as string)
 const exporter = computed(() =>
-  registry.value?.exporters.find(e => e.name === name.value)
+  registry.value.exporters.find(e => e.name === name.value)
 )
 
 const harborImage = computed(() =>
@@ -173,14 +173,14 @@ const alertRules = computed(() =>
 
 // Related exporters from same category
 const relatedExporters = computed(() => {
-  if (!exporter.value || !registry.value) return []
+  if (!exporter.value) return []
   return registry.value.exporters
     .filter(e => e.category === exporter.value!.category && e.name !== exporter.value!.name)
     .slice(0, 3)
 })
 
 // Prev/next navigation
-const exporterList = computed(() => registry.value?.exporters ?? [])
+const exporterList = computed(() => registry.value.exporters)
 const currentIndex = computed(() =>
   exporterList.value.findIndex(e => e.name === name.value)
 )

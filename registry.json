@@ -1,0 +1,1326 @@
+{
+  "generated_at": "2026-04-22T12:14:00.996265+00:00",
+  "total_exporters": 60,
+  "exporters": [
+    {
+      "name": "alertmanager-silence-exporter",
+      "display_name": "Alertmanager Silence Exporter",
+      "version": "1.1.0",
+      "port": 9147,
+      "description": "Prometheus exporter for Alertmanager silence metrics - silences, alerts, routing",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-alertmanager-silence-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-alertmanager-silence-exporter",
+      "github_release_prefix": "alertmanager-silence-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "alertmanager",
+        "silences",
+        "alerts",
+        "routing"
+      ]
+    },
+    {
+      "name": "argocd-sync-exporter",
+      "display_name": "ArgoCD Sync Exporter",
+      "version": "1.1.0",
+      "port": 9143,
+      "description": "Prometheus exporter for ArgoCD sync metrics - applications, health, sync status",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-argocd-sync-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-argocd-sync-exporter",
+      "github_release_prefix": "argocd-sync-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "argocd",
+        "gitops",
+        "sync",
+        "deployment"
+      ]
+    },
+    {
+      "name": "github-actions-exporter",
+      "display_name": "GitHub Actions Exporter",
+      "version": "1.1.0",
+      "port": 9140,
+      "description": "Prometheus exporter for GitHub Actions metrics - workflows, runs, duration",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-github-actions-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-github-actions-exporter",
+      "github_release_prefix": "github-actions-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "github",
+        "actions",
+        "workflows",
+        "ci"
+      ]
+    },
+    {
+      "name": "gitlab-pipeline-exporter",
+      "display_name": "GitLab Pipeline Exporter",
+      "version": "1.1.0",
+      "port": 9141,
+      "description": "Prometheus exporter for GitLab pipeline metrics - jobs, duration, status",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-gitlab-pipeline-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-gitlab-pipeline-exporter",
+      "github_release_prefix": "gitlab-pipeline-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "gitlab",
+        "pipeline",
+        "ci",
+        "jobs"
+      ]
+    },
+    {
+      "name": "grafana-dashboard-exporter",
+      "display_name": "Grafana Dashboard Exporter",
+      "version": "1.1.0",
+      "port": 9144,
+      "description": "Prometheus exporter for Grafana dashboard metrics - panels, datasources, alerts",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-grafana-dashboard-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-grafana-dashboard-exporter",
+      "github_release_prefix": "grafana-dashboard-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "grafana",
+        "dashboard",
+        "observability",
+        "panels"
+      ]
+    },
+    {
+      "name": "jenkins-queue-exporter",
+      "display_name": "Jenkins Queue Exporter",
+      "version": "1.1.0",
+      "port": 9142,
+      "description": "Prometheus exporter for Jenkins queue metrics - builds, executors, wait time",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-jenkins-queue-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-jenkins-queue-exporter",
+      "github_release_prefix": "jenkins-queue-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "jenkins",
+        "queue",
+        "builds",
+        "ci"
+      ]
+    },
+    {
+      "name": "loki-ingestion-exporter",
+      "display_name": "Loki Ingestion Exporter",
+      "version": "1.1.0",
+      "port": 9145,
+      "description": "Prometheus exporter for Loki ingestion metrics - rate, entries, chunks",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-loki-ingestion-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-loki-ingestion-exporter",
+      "github_release_prefix": "loki-ingestion-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "loki",
+        "logs",
+        "ingestion",
+        "observability"
+      ]
+    },
+    {
+      "name": "nomad-job-exporter",
+      "display_name": "Nomad Job Exporter",
+      "version": "1.1.0",
+      "port": 9152,
+      "description": "Prometheus exporter for HashiCorp Nomad job metrics - allocations, task states, evaluations, deployment status",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-nomad-job-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-nomad-job-exporter",
+      "github_release_prefix": "nomad-job-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 28,
+      "tags": [
+        "nomad",
+        "job",
+        "allocation",
+        "deployment"
+      ]
+    },
+    {
+      "name": "opentelemetry-collector-exporter",
+      "display_name": "OpenTelemetry Collector Exporter",
+      "version": "1.1.0",
+      "port": 9148,
+      "description": "Prometheus exporter for OpenTelemetry Collector metrics - receivers, processors, exporters",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-opentelemetry-collector-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-opentelemetry-collector-exporter",
+      "github_release_prefix": "opentelemetry-collector-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "opentelemetry",
+        "collector",
+        "tracing",
+        "metrics"
+      ]
+    },
+    {
+      "name": "slo-burn-rate-exporter",
+      "display_name": "SLO Burn Rate Exporter",
+      "version": "1.1.0",
+      "port": 9149,
+      "description": "Prometheus exporter for SLO burn rate metrics - error budget, violations, windows",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-slo-burn-rate-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-slo-burn-rate-exporter",
+      "github_release_prefix": "slo-burn-rate-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "slo",
+        "burn-rate",
+        "error-budget",
+        "reliability"
+      ]
+    },
+    {
+      "name": "tempo-trace-exporter",
+      "display_name": "Tempo Trace Exporter",
+      "version": "1.1.0",
+      "port": 9146,
+      "description": "Prometheus exporter for Tempo trace metrics - spans, latency, throughput",
+      "category": "CI/CD",
+      "docker_image": "lknappich/exporterhub-tempo-trace-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-tempo-trace-exporter",
+      "github_release_prefix": "tempo-trace-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "tempo",
+        "tracing",
+        "spans",
+        "observability"
+      ]
+    },
+    {
+      "name": "apache-status-exporter",
+      "display_name": "Apache Status Exporter",
+      "version": "1.1.0",
+      "port": 9156,
+      "description": "Prometheus exporter for Apache HTTP server metrics - worker count, request rate, bytes served, scoreboard status",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-apache-status-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-apache-status-exporter",
+      "github_release_prefix": "apache-status-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 26,
+      "tags": [
+        "apache",
+        "httpd",
+        "worker",
+        "request"
+      ]
+    },
+    {
+      "name": "cgroup-v2-exporter",
+      "display_name": "Cgroup V2 Exporter",
+      "version": "1.1.0",
+      "port": 9108,
+      "description": "Prometheus exporter for cgroup v2 metrics - CPU, memory, IO, pids",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-cgroup-v2-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-cgroup-v2-exporter",
+      "github_release_prefix": "cgroup-v2-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "cgroup",
+        "cpu",
+        "memory",
+        "io"
+      ]
+    },
+    {
+      "name": "containerd-exporter",
+      "display_name": "Containerd Exporter",
+      "version": "1.1.0",
+      "port": 9103,
+      "description": "Prometheus exporter for containerd runtime metrics - containers, images, tasks",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-containerd-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-containerd-exporter",
+      "github_release_prefix": "containerd-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "containerd",
+        "runtime",
+        "containers",
+        "tasks"
+      ]
+    },
+    {
+      "name": "docker-daemon-exporter",
+      "display_name": "Docker Daemon Exporter",
+      "version": "1.1.0",
+      "port": 9102,
+      "description": "Prometheus exporter for Docker daemon metrics - containers, images, volumes, networks",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-docker-daemon-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-docker-daemon-exporter",
+      "github_release_prefix": "docker-daemon-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "docker",
+        "containers",
+        "images",
+        "daemon"
+      ]
+    },
+    {
+      "name": "ipmi-hardware-exporter",
+      "display_name": "IPMI Hardware Exporter",
+      "version": "1.1.0",
+      "port": 9159,
+      "description": "Prometheus exporter for IPMI hardware metrics - sensor readings, fan speed, temperature, power consumption, SEL events",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-ipmi-hardware-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-ipmi-hardware-exporter",
+      "github_release_prefix": "ipmi-hardware-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 27,
+      "tags": [
+        "ipmi",
+        "hardware",
+        "sensor",
+        "fan"
+      ]
+    },
+    {
+      "name": "kafka-consumer-exporter",
+      "display_name": "Kafka Consumer Exporter",
+      "version": "1.1.0",
+      "port": 9154,
+      "description": "Prometheus exporter for Kafka consumer group metrics - lag, offset, partition assignment, rebalance events",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-kafka-consumer-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-kafka-consumer-exporter",
+      "github_release_prefix": "kafka-consumer-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 38,
+      "tags": [
+        "kafka",
+        "consumer",
+        "lag",
+        "offset"
+      ]
+    },
+    {
+      "name": "kernel-params-exporter",
+      "display_name": "Kernel Params Exporter",
+      "version": "1.1.0",
+      "port": 9107,
+      "description": "Prometheus exporter for Linux kernel parameters - sysctl, modules, flags",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-kernel-params-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-kernel-params-exporter",
+      "github_release_prefix": "kernel-params-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "kernel",
+        "sysctl",
+        "modules",
+        "linux"
+      ]
+    },
+    {
+      "name": "libvirt-exporter",
+      "display_name": "Libvirt Exporter",
+      "version": "1.1.0",
+      "port": 9105,
+      "description": "Prometheus exporter for libvirt hypervisor metrics - domains, networks, storage",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-libvirt-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-libvirt-exporter",
+      "github_release_prefix": "libvirt-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "libvirt",
+        "hypervisor",
+        "domains",
+        "storage"
+      ]
+    },
+    {
+      "name": "memcached-instance-exporter",
+      "display_name": "Memcached Instance Exporter",
+      "version": "1.1.0",
+      "port": 9158,
+      "description": "Prometheus exporter for Memcached instance metrics - hit/miss ratio, evictions, connection count, slab statistics",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-memcached-instance-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-memcached-instance-exporter",
+      "github_release_prefix": "memcached-instance-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 24,
+      "tags": [
+        "memcached",
+        "cache",
+        "hit",
+        "eviction"
+      ]
+    },
+    {
+      "name": "node-resources-exporter",
+      "display_name": "Node Resources Exporter",
+      "version": "1.1.0",
+      "port": 9101,
+      "description": "Prometheus exporter for node resources - CPU, memory, disk, network with pressure metrics",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-node-resources-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-node-resources-exporter",
+      "github_release_prefix": "node-resources-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "node",
+        "resources",
+        "cpu",
+        "memory"
+      ]
+    },
+    {
+      "name": "numa-topology-exporter",
+      "display_name": "NUMA Topology Exporter",
+      "version": "1.1.0",
+      "port": 9109,
+      "description": "Prometheus exporter for NUMA topology metrics - nodes, distances, memory",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-numa-topology-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-numa-topology-exporter",
+      "github_release_prefix": "numa-topology-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "numa",
+        "topology",
+        "memory",
+        "nodes"
+      ]
+    },
+    {
+      "name": "opensearch-cluster-exporter",
+      "display_name": "OpenSearch Cluster Exporter",
+      "version": "1.1.0",
+      "port": 9151,
+      "description": "Prometheus exporter for OpenSearch cluster metrics - shard allocation, indexing rate, search latency, cluster health",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-opensearch-cluster-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-opensearch-cluster-exporter",
+      "github_release_prefix": "opensearch-cluster-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 35,
+      "tags": [
+        "opensearch",
+        "search",
+        "cluster",
+        "shard"
+      ]
+    },
+    {
+      "name": "prometheus-meta-exporter",
+      "display_name": "Prometheus Meta Exporter",
+      "version": "1.1.0",
+      "port": 9100,
+      "description": "Prometheus exporter for monitoring Prometheus itself - targets, rules, runtime, config",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-prometheus-meta-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-prometheus-meta-exporter",
+      "github_release_prefix": "prometheus-meta-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "prometheus",
+        "monitoring",
+        "targets",
+        "rules"
+      ]
+    },
+    {
+      "name": "qemu-vm-exporter",
+      "display_name": "QEMU VM Exporter",
+      "version": "1.1.0",
+      "port": 9104,
+      "description": "Prometheus exporter for QEMU/KVM virtual machine metrics",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-qemu-vm-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-qemu-vm-exporter",
+      "github_release_prefix": "qemu-vm-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "qemu",
+        "kvm",
+        "virtualization",
+        "vms"
+      ]
+    },
+    {
+      "name": "rabbitmq-queue-exporter",
+      "display_name": "RabbitMQ Queue Exporter",
+      "version": "1.1.0",
+      "port": 9155,
+      "description": "Prometheus exporter for RabbitMQ queue metrics - message rates, consumer count, queue depth, connection status",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-rabbitmq-queue-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-rabbitmq-queue-exporter",
+      "github_release_prefix": "rabbitmq-queue-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 34,
+      "tags": [
+        "rabbitmq",
+        "queue",
+        "message",
+        "consumer"
+      ]
+    },
+    {
+      "name": "systemd-unit-exporter",
+      "display_name": "Systemd Unit Exporter",
+      "version": "1.1.0",
+      "port": 9106,
+      "description": "Prometheus exporter for systemd unit metrics - service status, timers, sockets",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-systemd-unit-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-systemd-unit-exporter",
+      "github_release_prefix": "systemd-unit-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "systemd",
+        "services",
+        "timers",
+        "sockets"
+      ]
+    },
+    {
+      "name": "vault-secrets-exporter",
+      "display_name": "Vault Secrets Exporter",
+      "version": "1.1.0",
+      "port": 9150,
+      "description": "Prometheus exporter for HashiCorp Vault secret metrics - seal status, token TTL, lease expiry, mount health",
+      "category": "Infrastructure",
+      "docker_image": "lknappich/exporterhub-vault-secrets-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-vault-secrets-exporter",
+      "github_release_prefix": "vault-secrets-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 30,
+      "tags": [
+        "vault",
+        "secrets",
+        "seal",
+        "token"
+      ]
+    },
+    {
+      "name": "cert-manager-exporter",
+      "display_name": "Cert Manager Exporter",
+      "version": "1.1.0",
+      "port": 9135,
+      "description": "Prometheus exporter for cert-manager metrics - certificates, issuers, readiness",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-cert-manager-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-cert-manager-exporter",
+      "github_release_prefix": "cert-manager-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "certmanager",
+        "certificates",
+        "tls",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "flux-reconciliation-exporter",
+      "display_name": "Flux Reconciliation Exporter",
+      "version": "1.1.0",
+      "port": 9134,
+      "description": "Prometheus exporter for Flux reconciliation metrics - ready, failed, duration",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-flux-reconciliation-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-flux-reconciliation-exporter",
+      "github_release_prefix": "flux-reconciliation-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "flux",
+        "gitops",
+        "reconciliation",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "helm-release-exporter",
+      "display_name": "Helm Release Exporter",
+      "version": "1.1.0",
+      "port": 9133,
+      "description": "Prometheus exporter for Helm release metrics - status, revision, values drift",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-helm-release-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-helm-release-exporter",
+      "github_release_prefix": "helm-release-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "helm",
+        "release",
+        "chart",
+        "revision"
+      ]
+    },
+    {
+      "name": "istio-mesh-exporter",
+      "display_name": "Istio Mesh Exporter",
+      "version": "1.1.0",
+      "port": 9137,
+      "description": "Prometheus exporter for Istio mesh metrics - proxies, config, traffic",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-istio-mesh-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-istio-mesh-exporter",
+      "github_release_prefix": "istio-mesh-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "istio",
+        "mesh",
+        "proxy",
+        "traffic"
+      ]
+    },
+    {
+      "name": "k8s-networkpolicy-exporter",
+      "display_name": "K8s NetworkPolicy Exporter",
+      "version": "1.1.0",
+      "port": 9132,
+      "description": "Prometheus exporter for Kubernetes NetworkPolicy metrics - rules, pods, policies",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-k8s-networkpolicy-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-k8s-networkpolicy-exporter",
+      "github_release_prefix": "k8s-networkpolicy-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "kubernetes",
+        "networkpolicy",
+        "network",
+        "policy"
+      ]
+    },
+    {
+      "name": "k8s-node-pressure-exporter",
+      "display_name": "K8s Node Pressure Exporter",
+      "version": "1.1.0",
+      "port": 9130,
+      "description": "Prometheus exporter for Kubernetes node pressure conditions - CPU, memory, disk, PID",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-k8s-node-pressure-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-k8s-node-pressure-exporter",
+      "github_release_prefix": "k8s-node-pressure-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "kubernetes",
+        "node",
+        "pressure",
+        "conditions"
+      ]
+    },
+    {
+      "name": "k8s-pvc-usage-exporter",
+      "display_name": "K8s PVC Usage Exporter",
+      "version": "1.1.0",
+      "port": 9131,
+      "description": "Prometheus exporter for Kubernetes PVC usage metrics - capacity, inodes, bindings",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-k8s-pvc-usage-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-k8s-pvc-usage-exporter",
+      "github_release_prefix": "k8s-pvc-usage-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "kubernetes",
+        "pvc",
+        "storage",
+        "volume"
+      ]
+    },
+    {
+      "name": "keda-scaler-exporter",
+      "display_name": "KEDA Scaler Exporter",
+      "version": "1.1.0",
+      "port": 9138,
+      "description": "Prometheus exporter for KEDA scaler metrics - triggers, metrics, conditions",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-keda-scaler-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-keda-scaler-exporter",
+      "github_release_prefix": "keda-scaler-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "keda",
+        "autoscaling",
+        "triggers",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "trivy-scan-exporter",
+      "display_name": "Trivy Scan Exporter",
+      "version": "1.1.0",
+      "port": 9139,
+      "description": "Prometheus exporter for Trivy scan metrics - vulnerabilities, severities, images",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-trivy-scan-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-trivy-scan-exporter",
+      "github_release_prefix": "trivy-scan-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "trivy",
+        "security",
+        "vulnerabilities",
+        "images"
+      ]
+    },
+    {
+      "name": "velero-backup-exporter",
+      "display_name": "Velero Backup Exporter",
+      "version": "1.1.0",
+      "port": 9136,
+      "description": "Prometheus exporter for Velero backup metrics - status, duration, errors",
+      "category": "Kubernetes",
+      "docker_image": "lknappich/exporterhub-velero-backup-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-velero-backup-exporter",
+      "github_release_prefix": "velero-backup-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "velero",
+        "backup",
+        "kubernetes",
+        "disaster-recovery"
+      ]
+    },
+    {
+      "name": "bgp-session-exporter",
+      "display_name": "BGP Session Exporter",
+      "version": "1.1.0",
+      "port": 9113,
+      "description": "Prometheus exporter for BGP session metrics - peers, routes, state changes",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-bgp-session-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-bgp-session-exporter",
+      "github_release_prefix": "bgp-session-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "bgp",
+        "routing",
+        "peers",
+        "session"
+      ]
+    },
+    {
+      "name": "bind-dns-exporter",
+      "display_name": "Bind DNS Exporter",
+      "version": "1.1.0",
+      "port": 9157,
+      "description": "Prometheus exporter for BIND DNS server metrics - query rate, cache hit ratio, zone transfer, resolver statistics",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-bind-dns-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-bind-dns-exporter",
+      "github_release_prefix": "bind-dns-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 29,
+      "tags": [
+        "bind",
+        "dns",
+        "query",
+        "resolver"
+      ]
+    },
+    {
+      "name": "consul-service-exporter",
+      "display_name": "Consul Service Exporter",
+      "version": "1.1.0",
+      "port": 9153,
+      "description": "Prometheus exporter for Consul service mesh metrics - service health, KV store, leader elections, agent status",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-consul-service-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-consul-service-exporter",
+      "github_release_prefix": "consul-service-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 32,
+      "tags": [
+        "consul",
+        "service",
+        "mesh",
+        "leader"
+      ]
+    },
+    {
+      "name": "dns-latency-exporter",
+      "display_name": "DNS Latency Exporter",
+      "version": "1.1.0",
+      "port": 9112,
+      "description": "Prometheus exporter for DNS resolution latency and error metrics",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-dns-latency-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-dns-latency-exporter",
+      "github_release_prefix": "dns-latency-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "dns",
+        "latency",
+        "resolution",
+        "errors"
+      ]
+    },
+    {
+      "name": "envoy-xds-exporter",
+      "display_name": "Envoy XDS Exporter",
+      "version": "1.1.0",
+      "port": 9118,
+      "description": "Prometheus exporter for Envoy xDS metrics - clusters, routes, listeners",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-envoy-xds-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-envoy-xds-exporter",
+      "github_release_prefix": "envoy-xds-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "envoy",
+        "xds",
+        "proxy",
+        "mesh"
+      ]
+    },
+    {
+      "name": "haproxy-stats-exporter",
+      "display_name": "HAProxy Stats Exporter",
+      "version": "1.1.0",
+      "port": 9116,
+      "description": "Prometheus exporter for HAProxy statistics - frontends, backends, servers, sessions",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-haproxy-stats-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-haproxy-stats-exporter",
+      "github_release_prefix": "haproxy-stats-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "haproxy",
+        "loadbalancer",
+        "frontends",
+        "backends"
+      ]
+    },
+    {
+      "name": "iptables-rules-exporter",
+      "display_name": "IPTables Rules Exporter",
+      "version": "1.1.0",
+      "port": 9110,
+      "description": "Prometheus exporter for iptables rules metrics - chain lengths, packet counts",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-iptables-rules-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-iptables-rules-exporter",
+      "github_release_prefix": "iptables-rules-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "iptables",
+        "firewall",
+        "rules",
+        "packets"
+      ]
+    },
+    {
+      "name": "network-interface-exporter",
+      "display_name": "Network Interface Exporter",
+      "version": "1.1.0",
+      "port": 9114,
+      "description": "Prometheus exporter for network interface metrics with enterprise-grade resilience",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-network-interface-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-network-interface-exporter",
+      "github_release_prefix": "network-interface-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "network",
+        "interface",
+        "traffic",
+        "bandwidth"
+      ]
+    },
+    {
+      "name": "nftables-exporter",
+      "display_name": "NFTables Exporter",
+      "version": "1.1.0",
+      "port": 9111,
+      "description": "Prometheus exporter for nftables metrics - rules, chains, sets, elements",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-nftables-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-nftables-exporter",
+      "github_release_prefix": "nftables-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "nftables",
+        "firewall",
+        "rules",
+        "chains"
+      ]
+    },
+    {
+      "name": "nginx-upstream-exporter",
+      "display_name": "Nginx Upstream Exporter",
+      "version": "1.1.0",
+      "port": 9117,
+      "description": "Prometheus exporter for Nginx upstream metrics - servers, responses, latency",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-nginx-upstream-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-nginx-upstream-exporter",
+      "github_release_prefix": "nginx-upstream-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "nginx",
+        "upstream",
+        "proxy",
+        "latency"
+      ]
+    },
+    {
+      "name": "vxlan-overlay-exporter",
+      "display_name": "VXLAN Overlay Exporter",
+      "version": "1.1.0",
+      "port": 9119,
+      "description": "Prometheus exporter for VXLAN overlay network metrics - tunnels, VNI, flooding",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-vxlan-overlay-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-vxlan-overlay-exporter",
+      "github_release_prefix": "vxlan-overlay-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "vxlan",
+        "overlay",
+        "tunnels",
+        "network"
+      ]
+    },
+    {
+      "name": "wireguard-exporter",
+      "display_name": "WireGuard Exporter",
+      "version": "1.1.0",
+      "port": 9115,
+      "description": "Prometheus exporter for WireGuard VPN metrics - peers, traffic, handshake latency",
+      "category": "Networking",
+      "docker_image": "lknappich/exporterhub-wireguard-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-wireguard-exporter",
+      "github_release_prefix": "wireguard-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "wireguard",
+        "vpn",
+        "peers",
+        "traffic"
+      ]
+    },
+    {
+      "name": "ceph-osd-exporter",
+      "display_name": "Ceph OSD Exporter",
+      "version": "1.1.0",
+      "port": 9122,
+      "description": "Prometheus exporter for Ceph OSD metrics - capacity, IO, recovery, PG state",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-ceph-osd-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-ceph-osd-exporter",
+      "github_release_prefix": "ceph-osd-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "ceph",
+        "osd",
+        "storage",
+        "recovery"
+      ]
+    },
+    {
+      "name": "clickhouse-query-exporter",
+      "display_name": "ClickHouse Query Exporter",
+      "version": "1.1.0",
+      "port": 9127,
+      "description": "Prometheus exporter for ClickHouse query metrics - performance, mutations, parts",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-clickhouse-query-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-clickhouse-query-exporter",
+      "github_release_prefix": "clickhouse-query-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "clickhouse",
+        "query",
+        "analytics",
+        "performance"
+      ]
+    },
+    {
+      "name": "elasticsearch-shard-exporter",
+      "display_name": "Elasticsearch Shard Exporter",
+      "version": "1.1.0",
+      "port": 9128,
+      "description": "Prometheus exporter for Elasticsearch shard metrics - allocation, recovery, size",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-elasticsearch-shard-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-elasticsearch-shard-exporter",
+      "github_release_prefix": "elasticsearch-shard-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "elasticsearch",
+        "shards",
+        "search",
+        "allocation"
+      ]
+    },
+    {
+      "name": "etcd-health-exporter",
+      "display_name": "etcd Health Exporter",
+      "version": "1.1.0",
+      "port": 9126,
+      "description": "Prometheus exporter for etcd cluster health, Raft, MVCC, disk, and network metrics",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-etcd-health-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-etcd-health-exporter",
+      "github_release_prefix": "etcd-health-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "etcd",
+        "raft",
+        "health",
+        "cluster"
+      ]
+    },
+    {
+      "name": "lvm-exporter",
+      "display_name": "LVM Exporter",
+      "version": "1.1.0",
+      "port": 9121,
+      "description": "Prometheus exporter for LVM metrics - volumes, groups, snapshots, thin pools",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-lvm-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-lvm-exporter",
+      "github_release_prefix": "lvm-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "lvm",
+        "volumes",
+        "snapshots",
+        "storage"
+      ]
+    },
+    {
+      "name": "minio-bucket-exporter",
+      "display_name": "MinIO Bucket Exporter",
+      "version": "1.1.0",
+      "port": 9129,
+      "description": "Prometheus exporter for MinIO bucket metrics - usage, objects, notifications",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-minio-bucket-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-minio-bucket-exporter",
+      "github_release_prefix": "minio-bucket-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "minio",
+        "bucket",
+        "storage",
+        "objects"
+      ]
+    },
+    {
+      "name": "mysql-binlog-exporter",
+      "display_name": "MySQL Binlog Exporter",
+      "version": "1.1.0",
+      "port": 9124,
+      "description": "Prometheus exporter for MySQL binlog metrics - position, GTID, lag",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-mysql-binlog-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-mysql-binlog-exporter",
+      "github_release_prefix": "mysql-binlog-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "mysql",
+        "binlog",
+        "replication",
+        "gtid"
+      ]
+    },
+    {
+      "name": "postgres-replication-exporter",
+      "display_name": "PostgreSQL Replication Exporter",
+      "version": "1.1.0",
+      "port": 9123,
+      "description": "Prometheus exporter for PostgreSQL replication metrics - lag, slots, WAL",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-postgres-replication-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-postgres-replication-exporter",
+      "github_release_prefix": "postgres-replication-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "postgres",
+        "replication",
+        "wal",
+        "lag"
+      ]
+    },
+    {
+      "name": "redis-cluster-exporter",
+      "display_name": "Redis Cluster Exporter",
+      "version": "1.1.0",
+      "port": 9125,
+      "description": "Prometheus exporter for Redis Cluster metrics with enterprise-grade resilience",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-redis-cluster-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-redis-cluster-exporter",
+      "github_release_prefix": "redis-cluster-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "redis",
+        "cluster",
+        "cache",
+        "replication"
+      ]
+    },
+    {
+      "name": "zfs-pool-exporter",
+      "display_name": "ZFS Pool Exporter",
+      "version": "1.1.0",
+      "port": 9120,
+      "description": "Prometheus exporter for ZFS pool metrics - health, capacity, scrub, IO",
+      "category": "Storage",
+      "docker_image": "lknappich/exporterhub-zfs-pool-exporter",
+      "docker_hub_url": "https://hub.docker.com/r/lknappich/exporterhub-zfs-pool-exporter",
+      "github_release_prefix": "zfs-pool-exporter",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "metrics_count": 25,
+      "tags": [
+        "zfs",
+        "pool",
+        "storage",
+        "scrub"
+      ]
+    }
+  ]
+}

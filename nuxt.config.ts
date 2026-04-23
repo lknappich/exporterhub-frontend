@@ -19,8 +19,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      registryUrl: process.env.REGISTRY_URL ||
-        'https://raw.githubusercontent.com/lknappich/exporterhub/main/registry/exporters.json',
+      registryUrl: process.env.REGISTRY_URL || '/registry.json',
       appVersion: process.env.npm_package_version || '1.0.0',
       appName: 'Exporter Hub',
     },

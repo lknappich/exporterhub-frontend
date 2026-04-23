@@ -179,9 +179,10 @@
 <script setup lang="ts">
 import { CATEGORIES, CATEGORY_COLORS } from '~/types/exporter'
 import type { Category, Registry } from '~/types/exporter'
+import registryData from '~/registry.json'
 
-const config = useRuntimeConfig()
-const { data: registry, pending } = await useFetch<Registry>(config.public.registryUrl)
+const registry = ref<Registry>(registryData as Registry)
+const pending = ref(false)
 
 const selectedCategory = ref<string>('All')
 const searchQuery = ref('')
@@ -195,7 +196,7 @@ watch(searchQuery, (val) => {
 })
 
 const filteredExporters = computed(() => {
-  let list = registry.value?.exporters ?? []
+  let list = registry.value.exporters
   if (debouncedQuery.value) {
     const q = debouncedQuery.value.toLowerCase()
     list = list.filter(e =>
@@ -215,9 +216,9 @@ const filteredExporters = computed(() => {
   })
 })
 
-const totalExporters = computed(() => registry.value?.total_exporters ?? 50)
+const totalExporters = computed(() => registry.value.total_exporters)
 const totalMetrics = computed(() =>
-  registry.value?.exporters.reduce((sum, e) => sum + e.metrics_count, 0) ?? 1250
+  registry.value.exporters.reduce((sum, e) => sum + e.metrics_count, 0)
 )
 
 useHead({
